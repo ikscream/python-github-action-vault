@@ -26,3 +26,5 @@ jobs:
           files: |
             LICENSE.txt
             *.jar
+      
+      - uses: "ikscream/python-github-action-vault/vault@main"
