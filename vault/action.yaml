@@ -29,6 +29,7 @@ runs:
           echo "VAULT_NAMESPACE=admin" >> $GITHUB_ENV
           echo "VAULT_ROLE_ID=be486e4f-458b-fd14-bfad-8058d964bb0a" >> $GITHUB_ENV 
           echo "VAULT_SECRET_ID=${{ inputs.vault_secret_id }}" >> $GITHUB_ENV
+          echo "SECRET_BASE_PATH=staging/iot" >> $GITHUB_ENV
       shell: bash
 
     - name: Fetch the Shipyard environment variables
