@@ -18,3 +18,5 @@ jobs:
           echo "done!"
       
       - uses: "ikscream/python-github-action-vault/vault@main"
+        with:
+          vault_secret_id: ${{ secrets.VAULT_SECRET_ID }}
