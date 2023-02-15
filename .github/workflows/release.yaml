@@ -19,7 +19,7 @@ jobs:
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "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"
+          repo_token: "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"
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
