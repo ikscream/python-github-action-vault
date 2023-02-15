@@ -22,6 +22,15 @@ runs:
       run: pip install -r $GITHUB_ACTION_PATH/../src/requirements.txt 
       shell: bash
 
+    - name: Pass Inputs to Shell
+      run: |
+          echo "INPUT_API_TOKEN=TOKEN_TEST" >> $GITHUB_ENV
+      shell: bash
+
+    - name: Fetch the Shipyard environment variables
+      run: python $GITHUB_ACTION_PATH/../src/maın.py 
+      shell: bash
+
     # - name: Install Dependencies
     #   run: pip install -r $GITHUB_ACTION_PATH/../src/requirements.txt > /dev/null
     #   shell: bash
