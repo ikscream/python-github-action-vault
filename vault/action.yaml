@@ -18,6 +18,10 @@ runs:
         echo "Hello!"
       shell: bash
 
+    - name: Install Dependencies
+      run: pip install -r $GITHUB_ACTION_PATH/../src/requirements.txt 
+      shell: bash
+
     # - name: Install Dependencies
     #   run: pip install -r $GITHUB_ACTION_PATH/../src/requirements.txt > /dev/null
     #   shell: bash
