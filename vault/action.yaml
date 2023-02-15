@@ -27,7 +27,7 @@ runs:
           echo "INPUT_API_TOKEN=TOKEN_TEST" >> $GITHUB_ENV
           echo "VAULT_URL=https://hero-labs-public-vault-52027e0c.ba335454.z1.hashicorp.cloud:8200" >> $GITHUB_ENV
           echo "VAULT_NAMESPACE=admin" >> $GITHUB_ENV
-          echo "VAULT_ROLE_ID=be486e4f-458b-fd14-bfad-8058d964bb0a" >> $GITHUB_ENV 
+          echo "VAULT_ROLE_ID=110063fe-4433-1227-6ac2-291fc924e688" >> $GITHUB_ENV 
           echo "VAULT_SECRET_ID=${{ inputs.vault_secret_id }}" >> $GITHUB_ENV
           echo "SECRET_BASE_PATH=staging/iot" >> $GITHUB_ENV
       shell: bash
