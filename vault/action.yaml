@@ -28,7 +28,7 @@ runs:
       shell: bash
 
     - name: Fetch the Shipyard environment variables
-      run: python $GITHUB_ACTION_PATH/../src/maın.py 
+      run: python $GITHUB_ACTION_PATH/../src/main.py 
       shell: bash
 
     # - name: Install Dependencies
