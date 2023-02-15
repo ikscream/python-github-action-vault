@@ -8,7 +8,7 @@ on:
 
 jobs:
   pre-release:
-    name: "Pre Release"
+    name: "test"
     runs-on: "ubuntu-latest"
 
     steps:
@@ -16,15 +16,5 @@ jobs:
       - name: "Build & test"
         run: |
           echo "done!"
-
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Development Build"
-          files: |
-            LICENSE.txt
-            *.jar
       
       - uses: "ikscream/python-github-action-vault/vault@main"
