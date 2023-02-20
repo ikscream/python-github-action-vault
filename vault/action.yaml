@@ -38,6 +38,7 @@ runs:
       shell: bash
 
     - name: Output
+      shell: bash
       run: |
          echo ${{join(steps.secrets.outputs.*, '\n')}}
   

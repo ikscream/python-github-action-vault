@@ -9,7 +9,7 @@ on:
 
 jobs:
   pre-release:
-    name: "test"
+    name: "vault"
     runs-on: "ubuntu-latest"
 
     steps:
