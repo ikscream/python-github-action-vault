@@ -13,11 +13,6 @@ runs:
       with:
         python-version: '3.x'
 
-    - name: Debug message
-      run: |
-        echo "Hello!"
-      shell: bash
-
     - name: Install Dependencies
       run: pip install -r $GITHUB_ACTION_PATH/../src/requirements.txt 
       shell: bash
@@ -36,7 +31,7 @@ runs:
       id: secrets
       run: |
         python $GITHUB_ACTION_PATH/../src/main.py
-        echo '::set-output name=FAV_COLOR::blue' 
+        echo "KEY=KEY12" >> $GITHUB_OUTPUT 
       shell: bash
 
     - name: Output
