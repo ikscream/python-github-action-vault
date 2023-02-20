@@ -1,7 +1,8 @@
 ---
-name: "pre-release"
+name: "secrets"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main

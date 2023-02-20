@@ -33,9 +33,18 @@ runs:
       shell: bash
 
     - name: Fetch the Shipyard environment variables
+      id: secrets
       run: python $GITHUB_ACTION_PATH/../src/main.py 
       shell: bash
 
+    - name: Output
+      run: |
+         echo ${{join(steps.secrets.outputs.*, '\n')}}
+  
+  
+        #  echo "${{steps.abc.outputs.FAV_NUMBER}}"
+
+# ${{join(steps.run_tests.outputs.*, '\n')}}
     # - name: Install Dependencies
     #   run: pip install -r $GITHUB_ACTION_PATH/../src/requirements.txt > /dev/null
     #   shell: bash
