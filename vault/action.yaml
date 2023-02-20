@@ -30,7 +30,7 @@ runs:
     - name: Fetch the Shipyard environment variables
       id: secrets
       run: |
-        python $GITHUB_ACTION_PATH/../src/main.py
+        echo "KEY=$(python $GITHUB_ACTION_PATH/../src/main.py)" >> $GITHUB_OUTPUT 
         echo "KEY=KEY12" >> $GITHUB_OUTPUT 
       shell: bash
 
