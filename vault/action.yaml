@@ -9,7 +9,7 @@ runs:
   using: composite
   steps:
     - name: Install Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
@@ -34,7 +34,9 @@ runs:
 
     - name: Fetch the Shipyard environment variables
       id: secrets
-      run: python $GITHUB_ACTION_PATH/../src/main.py 
+      run: |
+        python $GITHUB_ACTION_PATH/../src/main.py
+        echo '::set-output name=FAV_COLOR::blue' 
       shell: bash
 
     - name: Output
