@@ -30,7 +30,7 @@ runs:
     - name: Fetch the Shipyard environment variables
       id: secrets
       run: |
-        # echo "$(python $GITHUB_ACTION_PATH/../src/main.py)" >> $GITHUB_OUTPUT 
+        # echo "SECRETS=$(python $GITHUB_ACTION_PATH/../src/main.py)" >> $GITHUB_OUTPUT 
         echo "KEY1=VALUE1" >> $GITHUB_OUTPUT 
         echo "KEY2=VALUE2" >> $GITHUB_OUTPUT 
       shell: bash
@@ -38,7 +38,7 @@ runs:
     - name: Output
       shell: bash
       run: |
-         echo ${{join(steps.secrets.outputs.*, '\n')}}
+         echo -e "${{join(steps.secrets.outputs.*, '\n')}}"
   
   
         #  echo "${{steps.abc.outputs.FAV_NUMBER}}"
