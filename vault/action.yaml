@@ -37,7 +37,7 @@ runs:
     - name: Output
       shell: bash
       run: |
-         echo ${{join(steps.secrets.outputs.*, '\n')}}
+         echo ${{join(steps.secrets.outputs, '\n')}}
   
   
         #  echo "${{steps.abc.outputs.FAV_NUMBER}}"
