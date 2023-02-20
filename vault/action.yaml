@@ -46,6 +46,7 @@ runs:
          echo -e "${{join(steps.secrets.outputs.*, '\n')}}"
 
     - name: create string
+      shell: bash
       run: |
         MY_STRING=$(cat << EOF
         first line
@@ -60,6 +61,7 @@ runs:
       id: my_string
       
     - name: display string
+      shell: bash
       run: |
         echo "The string is: ${{ steps.my_string.outputs.content }}"
   
