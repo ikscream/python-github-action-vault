@@ -20,7 +20,6 @@ if __name__ == "__main__":
         )
 
     current_token = client.auth.token.lookup_self()
-    # print(f"{client.is_authenticated() =}")
 
     list_response = client.secrets.kv.v2.list_secrets(
         path=SECRET_BASE_PATH,
