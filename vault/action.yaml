@@ -27,6 +27,11 @@ runs:
           echo "SECRET_BASE_PATH=staging/iot" >> $GITHUB_ENV
       shell: bash
 
+    - name: Test secrets
+      shell: bash
+      run: |
+        python $GITHUB_ACTION_PATH/../src/main.py
+
     - name: Fetch the Shipyard environment variables
       id: secrets
       run: |
